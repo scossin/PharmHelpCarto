@@ -1,0 +1,14 @@
+version: '3'
+
+services: 
+   shiny:
+    build:
+     context: ./imageShiny
+    image: rocker/shiny:leaflet
+    container_name: ${SHINY_CONTAINER_NAME}
+    volumes:
+      - ./shiny_server:/srv/shiny-server
+    ports:
+     - ${SHINY_PORT}:3838
+    env_file:
+      - ./.env
