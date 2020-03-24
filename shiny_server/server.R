@@ -3,7 +3,7 @@ function(input,output, session){
   ## carte leaflet
   output$map <- renderLeaflet({
     m <- leaflet(data = NULL) %>%
-      addProviderTiles("Stamen.TonerLite")   %>%
+      addProviderTiles("OpenStreetMap.Mapnik")   %>%
       # markers UNV
       addMarkers(lng=coordinates(coordonnees)[,1],
                 lat=coordinates(coordonnees)[,2],
