@@ -3,7 +3,7 @@ library(shiny)
 library(maptools)
 library(leaflet)
 library(jsonlite)
-infos_coord <-jsonlite::fromJSON("./data/infos_coord24032020.json")
+infos_coord <-jsonlite::fromJSON("./data/infos_coord25032020.json")
 coordonnees <- infos_coord[,c(8,9)]
 
 ## set empty string if NA phone_number
