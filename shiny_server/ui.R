@@ -1,7 +1,7 @@
 navbarPage(shiny::a("Pharm'Help",href="https://www.pharmhelp.anepf.org/"),
   
   # onglet carte         
-  tabPanel("Mis à jour le 26/03/2020",
+  tabPanel("Mis à jour le 27/03/2020",
            # tout englobé dans div pour le CSS
            div(class="outer",
                tags$head(
