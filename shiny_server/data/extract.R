@@ -1,7 +1,7 @@
 ### Scrap the website
 library(rvest)
 library(dplyr)
-text_rvest <- read_html("./Pharm'Help30032020.html") ## downloaded manually
+text_rvest <- read_html("./Pharm'Help02042020.html") ## downloaded manually
 cards <- text_rvest %>% html_nodes(".card")
 length(cards) ## 81
 
@@ -65,5 +65,5 @@ infos_coord$id <- 1:nrow(infos_coord)
 #### write Json 
 library(jsonlite)
 json_infos_coord <- jsonlite::toJSON(infos_coord)
-writeLines(text = json_infos_coord, con="infos_coord30032020.json")
-voir <- jsonlite::fromJSON("infos_coord30032020.json") ## check it opens correctly
+writeLines(text = json_infos_coord, con="infos_coord02042020.json")
+voir <- jsonlite::fromJSON("infos_coord02042020.json") ## check it opens correctly
